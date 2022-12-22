@@ -32,15 +32,22 @@ pre{
 }
 
 #container{
-    height:450px;
-    width: 450px;
+    /* height:450px;
+    width: 450px; */
     display: flex;
     flex-direction: row;
     /* background-color: ; */
     column-gap: 10px;
+    row-gap: 5px;
 }
 .box{
     height: 150px;
     width: 150px;
     background-color: aqua;
+}
+#btn{
+    margin-top: 10px;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 3px 3px 3px grey;
 }
