@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Hansdson</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>JS HANDSON 11</h1>
+    <h2>DOM</h2>
+
+    <p class="ques"><span class="red">Qn 1. Write the code to access element which is having id as "text"</span>
+        <p class="ans"><span class="green">Ans - </span>
+        <pre>let textElement=document.getElementById("text");
+            console.log(textElement.innerText)
+        </pre></p>
+
+        <p class="ques"><span class="red">Qn 2. Write the code to access element which is having tag as "h1"</span>
+            <p class="ans"><span class="green">Ans - </span>
+            <pre>
+                
+                let heading=document.getElementsByTagName("h1");
+
+            </pre></p>
+       
+       
+            <p class="ques"><span class="red">Qn 3. Write the code to access element which is having class as "box"</span>
+            <p class="ans"><span class="green">Ans - </span>
+            <pre>
+                
+                let box=document.getElementsByClassName("box");
+            </pre></p>
+        
+        
+            <p class="ques"><span class="red">Qn 4. Write the code to access element which is having tag as "h1""&lt;h1>Hello &lt;/h1>Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</span>
+            <p class="ans"><span class="green">Ans - </span>
+            <pre>
+                
+                let heading1=document.getElementById("heading1")
+                heading1.addEventListener("mouseover" , function(){
+                    heading1.innerText="Hello World";
+                })
+
+            </pre></p>
+          
+          
+            <p class="ques"><span class="red">Qn 5. Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.</span>
+            <p class="ans"><span class="green">Ans - 
+                <div id="container">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <button id="btn" >
+                    Click here to change direction of box
+                </button>
+            </span>
+            <pre>
+            </pre></p>
+
+            <p class="ques"><span class="red">Qn 6. What’s the difference between window vs document?</span>
+                <p class="ans"><span class="green">Ans - </span> <br>
+                    <b>Window </b> - Window is the main JavaScript object root, aka the global object in a browser, and it can also be treated as the root of the document object model. You can access it as window. <br>
+                    <b>Document</b> - Document is the main object of the potentially visible (or better yet: rendered) document object model/DOM.
+                <pre>
+
+                </pre></p>
+
+                <p class="ques"><h1 id="heading">Hello </h1><span class="red">Qn 7. Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"</span>
+                    <p class="ans"><span class="green">Ans - </span>
+                    <pre>
+                        
+                        let head=document.getElementById("heading").style.color="red"; 
+                    </pre></p>
+
+
+                    <span class="ques"><p class="red">Qn 8. Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical directionCreate an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</p></span>
+                        <p class="ans"><span class="green">Ans - 
+                            <p id="txt">Hello World</p>
+                            <button id="bttn">Replace Text</button>
+                        </span>
+                        <pre>
+                        </pre></p>
+
+
+                        <span class="ques"><p class="red">Qn 9.Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second.</p></span>
+                        <p class="ans"><span class="green">Ans - 
+                        </span> <br> <div id="clock"></div>
+                        <pre>
+                            function timer(){
+                                let times=new Date();
+                                let hr = times.getHours();
+                                let min = times.getMinutes();
+                                let secs= times.getSeconds();
+                                console.log(hr,min,secs);
+                                document.getElementById("clock").innerHTML = hr+":"+min+":"+secs;
+                                setTimeout(timer, 1000);
+                            }
+                            
+                        </pre></p>
+
+                        <p class="ques"><span class="red">Qn 10. Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected</span>
+                            <p class="ans"><span class="green">Ans - </span> <br>
+                                <select name="year" id="">
+                                    <option value="" style="font-weight: bold;">2021-2022</option>
+                                    <option value="01">January 2021</option>
+                                    <option value="02">February 2021</option>
+                                    <option value="03">March 2021</option>
+                                    <option value="04">April 2021</option>
+                                    <option value="05">May 2021</option>
+                                    <option value="06">June 2021</option>
+                                    <option value="07">July 2021</option>
+                                    <option value="08">August 2021</option>
+                                    <option value="09">September 2021</option>
+                                    <option value="10">October 2021</option>
+                                    <option value="11">November 2021</option>
+                                    <option value="12">December 2021</option>
+                                    <option value="" style="font-weight: bold;">2022</option>
+                                    <option value="01">January 2022</option>
+                                    <option value="02">February 2022</option>
+                                    <option value="03">March 2022</option>
+                                    <option value="04">April 2022</option>
+                                    <option value="05">May 2022</option>
+                                    <option value="06">June 2022</option>
+                                    <option value="07">July 2022</option>
+                                    <option value="08">August 2022</option>
+                                    <option value="09">September 2022</option>
+                                    <option value="10">October 2022</option>
+                                    <option value="11">November 2022</option>
+                                    <option value="12">December 2022</option>
+                                </select>
+                            <pre>
+                            </pre></p>
+
+
+
+<script src="index.js"></script>                  
+</body>
+</html>
